@@ -12,7 +12,7 @@
 :root {
   /* COLORS */
   --FT-COLOR: #111111;
-  --MENU--BGCOLOR: white;
+  --HEADER--BGCOLOR: white;
   --THEME-COLOR: #d2b356;
 }
 
@@ -42,7 +42,9 @@ header {
   align-items: center;
   padding: 1.25rem;
   text-transform: uppercase;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: var(--HEADER--BGCOLOR);
 }
 
 header .logo {
@@ -119,7 +121,7 @@ header .social {
     top: -10000px;
     left: 0;
     width: 100%;
-    background-color: var(--MENU--BGCOLOR);
+    background-color: var(--HEADER--BGCOLOR);
     transition: top 0.5s ease;
     -webkit-transition: top 0.5s ease;
     -moz-transition: top 0.5s ease;
