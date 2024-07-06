@@ -13,6 +13,7 @@
   /* COLORS */
   --FT-COLOR: #111111;
   --MENU--BGCOLOR: white;
+  --THEME-COLOR: #d2b356;
 }
 
 /* || GENERAL STYLES */
@@ -148,5 +149,81 @@ header .social {
 @media screen and (max-width: 600px) {
   header .social {
     display: none;
+  }
+}
+
+/* LANDING SECTION */
+.landing {
+  padding: 10rem 2.5rem;
+  background-image: url(../photos/banner-image-1.jpg);
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.landing .content {
+  width: 30%;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.landing .content::before,
+.landing .content::after {
+  content: "";
+  position: absolute;
+  background: var(--THEME-COLOR);
+  width: 30px;
+  height: 5px;
+  left: 5px;
+}
+
+.landing .content::before {
+  top: -10px;
+}
+
+.landing .content::after {
+  bottom: -30px;
+}
+
+.landing .content h1 {
+  font-weight: bolder;
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+}
+
+.landing .content p {
+  font-size: 1.25rem;
+}
+
+.landing a:any-link {
+  color: var(--FT-COLOR);
+  padding: 10px;
+  border: 2px solid var(--FT-COLOR);
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.landing a:is(a:hover, a:focus) {
+  border-color: var(--THEME-COLOR);
+  color: var(--THEME-COLOR);
+}
+
+@media screen and (min-width: 1400px) {
+  .landing {
+    padding: 14rem 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing {
+    padding: 5rem 2.5rem;
+  }
+  .landing .content {
+    width: 100%;
   }
 }
