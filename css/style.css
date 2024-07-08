@@ -221,12 +221,6 @@ header .social {
   color: var(--THEME-COLOR);
 }
 
-@media screen and (min-width: 1400px) {
-  .landing {
-    padding: 14rem 6rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .landing {
     padding: 5rem 2.5rem;
