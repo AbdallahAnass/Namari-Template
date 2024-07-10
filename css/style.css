@@ -40,6 +40,10 @@ p {
   line-height: 1.5;
 }
 
+img {
+  display: block;
+}
+
 /* || HEADER */
 header {
   display: flex;
@@ -304,5 +308,67 @@ header .social {
 @media screen and (max-width: 576px) {
   .skills-section .skills {
     flex-direction: column;
+  }
+}
+
+/* GALLERY SECTION */
+.gallery {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .photo {
+  flex-basis: calc(100% / 3);
+  position: relative;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.gallery .photo a {
+  display: block;
+}
+
+.gallery .photo::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  color: var(--THEME-COLOR);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.gallery .photo:hover::after {
+  opacity: 0.7;
+}
+
+.gallery img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .photo {
+    flex-basis: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .gallery .photo {
+    flex-basis: 100%;
   }
 }
