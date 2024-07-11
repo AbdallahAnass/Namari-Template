@@ -372,3 +372,124 @@ header .social {
     flex-basis: 100%;
   }
 }
+
+/* CONTENT SECTION  */
+.content-section {
+  padding: 5rem 2.5rem;
+  display: flex;
+}
+
+.content-section div {
+  flex-basis: calc((100% / 3) - 20px);
+}
+
+.content-section .quote {
+  padding: 2rem;
+  text-align: right;
+}
+
+.content-section .quote q {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.content-section .quote p {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.content-section .quote p::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 1px;
+  background-color: var(--FT-COLOR);
+  top: 50%;
+  left: -22px;
+}
+
+.content-section .text {
+  padding: 1rem;
+}
+
+.content-section .text h2 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--Para-COLOR);
+  margin-bottom: 2rem;
+}
+
+.content-section .text h3 {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.content-section .text h3::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: var(--THEME-COLOR);
+  bottom: -60px;
+  left: 0;
+}
+
+.content-section .text p:nth-child(3) {
+  color: var(--Para-COLOR);
+}
+
+.content-section .text p {
+  margin-bottom: 2rem;
+}
+
+.content-section .text a {
+  display: block;
+  width: fit-content;
+  border: 5px solid var(--FT-COLOR);
+  padding: 1rem 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--FT-COLOR);
+  letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.content-section .text a:is(a:hover, a:focus) {
+  color: var(--THEME-COLOR);
+  border-color: var(--THEME-COLOR);
+}
+
+.content-section .image img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .content-section {
+    flex-wrap: wrap;
+  }
+
+  .content-section div {
+    flex-basis: calc((100% / 2 - 20px));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-section {
+    padding: 5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content-section div {
+    flex-basis: 100%;
+  }
+}
