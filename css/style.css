@@ -803,3 +803,39 @@ header .social {
     flex-basis: 100%;
   }
 }
+
+/* FOOTER */
+footer {
+  color: var(--Para-COLOR);
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+footer p {
+}
+
+footer .media {
+  display: flex;
+}
+
+footer .media .icon {
+}
+
+footer .media .icon a {
+  padding: 1rem;
+  color: inherit;
+}
+
+footer .media .icon a i {
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    padding: 3rem 1rem;
+  }
+
+  footer .media .icon a {
+    padding: 1rem 0.5rem;
+  }
+}
