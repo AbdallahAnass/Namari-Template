@@ -666,3 +666,140 @@ header .social {
     flex-basis: 100%;
   }
 }
+
+.plans {
+  padding: 5rem 2.5rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.plans > h2 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--Para-COLOR);
+  margin-bottom: 2rem;
+}
+
+.plans > h3 {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.plans h3::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: var(--THEME-COLOR);
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2rem;
+}
+
+.plans .all-plans {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plans .all-plans .plan {
+  background-color: white;
+  padding: 2rem;
+  flex-basis: calc((100% / 3) - 20px);
+  color: var(--FT-COLOR);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.5s ease-in-out;
+  border: 10px solid white;
+}
+
+.plans .all-plans .plan:hover {
+  border-color: var(--THEME-COLOR);
+}
+
+.plans .all-plans .plan h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.plans .all-plans .plan h3 {
+  color: var(--Para-COLOR);
+  font-weight: 100;
+  font-style: italic;
+}
+
+.plans .all-plans .plan .price {
+  background-color: #f5f5f5;
+  padding: 2rem 0.5rem;
+}
+
+.plans .all-plans .plan .price h4 {
+  font-size: 4rem;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.plans .all-plans .plan .price h4::before {
+  content: "\0024";
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: -20px;
+  font-size: 2rem;
+}
+
+.plans .all-plans .plan .price p {
+  color: var(--Para-COLOR);
+}
+
+.plans .all-plans .plan .advantages ul li {
+  color: var(--FT-COLOR);
+  padding: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.plans .all-plans .plan .advantages ul li:last-of-type {
+  border: none;
+}
+
+.plans .all-plans .plan a {
+  display: block;
+  width: fit-content;
+  border: 5px solid var(--FT-COLOR);
+  padding: 1rem 2.5rem;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--FT-COLOR);
+  letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.plans .all-plans .plan a:is(a:hover, a:focus) {
+  color: var(--THEME-COLOR);
+  border-color: var(--THEME-COLOR);
+}
+
+@media screen and (max-width: 992px) {
+  .plans .all-plans {
+    flex-wrap: wrap;
+  }
+  .plans .all-plans .plan {
+    flex-basis: calc((100% / 2) - 60px);
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plans .all-plans .plan {
+    flex-basis: 100%;
+  }
+}
