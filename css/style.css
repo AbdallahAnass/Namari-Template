@@ -660,18 +660,6 @@ header a:any-link:hover {
   position: relative;
 }
 
-.plans h3::after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 5px;
-  background: var(--THEME-COLOR);
-  bottom: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 2rem;
-}
-
 .all-plans {
   display: flex;
   justify-content: space-between;
