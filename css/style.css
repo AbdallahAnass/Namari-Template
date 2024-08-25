@@ -74,49 +74,41 @@ header a:any-link {
   display: block;
   color: inherit;
   transition: opacity 1s;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
 }
 
 header a:any-link:hover {
   opacity: 0.6;
 }
 
-header .menu,
-header .menu::before,
-header .menu::after {
+.menu,
+.menu::before,
+.menu::after {
   width: 25px;
   height: 5px;
   background-color: var(--FT-COLOR);
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
-header .menu {
+.menu {
   display: none;
   position: relative;
 }
 
-header .menu::before,
-header .menu::after {
+.menu::before,
+.menu::after {
   content: "";
   position: absolute;
 }
 
-header .menu::before {
+.menu::before {
   top: -8px;
 }
 
-header .menu::after {
+.menu::after {
   top: 8px;
 }
 
-header .social {
+.social {
   display: flex;
   gap: 1.5rem;
 }
@@ -134,10 +126,6 @@ header .social {
     width: 100%;
     background-color: var(--HEADER--BGCOLOR);
     transition: top 0.5s ease;
-    -webkit-transition: top 0.5s ease;
-    -moz-transition: top 0.5s ease;
-    -ms-transition: top 0.5s ease;
-    -o-transition: top 0.5s ease;
   }
 
   header nav:hover ul {
@@ -160,7 +148,7 @@ header .social {
 }
 
 @media screen and (max-width: 600px) {
-  header .social {
+  .social {
     display: none;
   }
 }
@@ -198,13 +186,13 @@ header .social {
   bottom: -30px;
 }
 
-.landing .content h1 {
+.landing h1 {
   font-weight: bolder;
   font-size: 4rem;
   margin-bottom: 0.5em;
 }
 
-.landing .content p {
+.landing p {
   font-size: 1.25rem;
 }
 
@@ -215,10 +203,6 @@ header .social {
   font-weight: 700;
   font-size: 1.2rem;
   transition: all 1s ease-in-out;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
 }
 
 .landing a:is(a:hover, a:focus) {
@@ -247,20 +231,20 @@ header .social {
   flex-basis: 30%;
 }
 
-.skills-section .text h2 {
+.skills-section h2 {
   font-size: 1rem;
   letter-spacing: 5px;
   color: #ccc;
   margin-bottom: 1.5rem;
 }
 
-.skills-section .text h3 {
+.skills-section h3 {
   font-size: 2.5rem;
   margin-bottom: 5rem;
   position: relative;
 }
 
-.skills-section .text h3::after {
+.skills-section h3::after {
   position: absolute;
   content: "";
   width: 30px;
@@ -274,7 +258,7 @@ header .social {
   color: var(--Para-COLOR);
 }
 
-.skills-section .skills {
+.skills {
   flex-basis: 65%;
   display: flex;
   flex-wrap: wrap;
@@ -282,7 +266,7 @@ header .social {
   row-gap: 2rem;
 }
 
-.skills-section .skills .skill {
+.skill {
   flex-basis: 49%;
   display: flex;
   flex-flow: nowrap column;
@@ -290,12 +274,12 @@ header .social {
   padding: 1rem;
 }
 
-.skills-section .skills .skill .icon i {
+.skill i {
   font-size: 3rem;
   color: var(--THEME-COLOR);
 }
 
-.skills-section .skills .skill h4 {
+.skill h4 {
   font-size: 1.5rem;
 }
 
@@ -307,7 +291,7 @@ header .social {
 }
 
 @media screen and (max-width: 576px) {
-  .skills-section .skills {
+  .skills {
     flex-direction: column;
   }
 }
@@ -319,22 +303,18 @@ header .social {
   flex-wrap: wrap;
 }
 
-.gallery .photo {
+.photo {
   flex-basis: calc(100% / 3);
   position: relative;
   transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
   cursor: pointer;
 }
 
-.gallery .photo a {
+.photo a {
   display: block;
 }
 
-.gallery .photo::after {
+.photo::after {
   content: "+";
   position: absolute;
   top: 0;
@@ -348,24 +328,20 @@ header .social {
   background-color: white;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
-.gallery .photo:hover::after {
+.photo:hover::after {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 768px) {
-  .gallery .photo {
+  .photo {
     flex-basis: calc(100% / 2);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .gallery .photo {
+  .photo {
     flex-basis: 100%;
   }
 }
@@ -380,26 +356,26 @@ header .social {
   flex-basis: calc((100% / 3) - 20px);
 }
 
-.content-section .quote {
+.quote {
   padding: 2rem;
   text-align: right;
 }
 
-.content-section .quote q {
+.quote q {
   display: block;
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.content-section .quote p {
+.quote p {
   position: relative;
   width: fit-content;
   margin-left: auto;
   white-space: nowrap;
 }
 
-.content-section .quote p::before {
+.quote p::before {
   position: absolute;
   content: "";
   width: 15px;
@@ -413,20 +389,20 @@ header .social {
   padding: 1rem;
 }
 
-.content-section .text h2 {
+.content-section h2 {
   font-size: 1rem;
   letter-spacing: 2px;
   color: var(--Para-COLOR);
   margin-bottom: 2rem;
 }
 
-.content-section .text h3 {
+.content-section h3 {
   font-size: 2rem;
   margin-bottom: 5rem;
   position: relative;
 }
 
-.content-section .text h3::after {
+.content-section h3::after {
   position: absolute;
   content: "";
   width: 30px;
@@ -436,7 +412,7 @@ header .social {
   left: 0;
 }
 
-.content-section .text p:nth-child(3) {
+.content-section p:nth-child(3) {
   color: var(--Para-COLOR);
 }
 
@@ -444,7 +420,7 @@ header .social {
   margin-bottom: 2rem;
 }
 
-.content-section .text a {
+.content-section a {
   display: block;
   width: fit-content;
   border: 5px solid var(--FT-COLOR);
@@ -454,13 +430,9 @@ header .social {
   color: var(--FT-COLOR);
   letter-spacing: 2px;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
-.content-section .text a:is(a:hover, a:focus) {
+.content-section a:is(a:hover, a:focus) {
   color: var(--THEME-COLOR);
   border-color: var(--THEME-COLOR);
 }
@@ -508,17 +480,17 @@ header .social {
   margin-bottom: 2rem;
 }
 
-.feedback .customers {
+.customers {
   display: flex;
   justify-content: space-between;
 }
 
-.feedback .customers .customer {
+.customer {
   flex-basis: calc(100% / 3 - 20px);
   padding: 1rem;
 }
 
-.feedback .customer .image {
+.customer .image {
   width: 120px;
   height: 120px;
   margin: 0 auto 2rem;
@@ -530,7 +502,7 @@ header .social {
   -o-border-radius: 50%;
 }
 
-.feedback .customer q {
+.customer q {
   padding: 2rem;
   color: var(--FT-COLOR);
   opacity: 0.7;
@@ -540,7 +512,7 @@ header .social {
   line-height: 1.5;
 }
 
-.feedback .customer q::after {
+.customer q::after {
   position: absolute;
   content: "";
   width: 40px;
@@ -555,7 +527,7 @@ header .social {
     padding: 5rem 1rem;
   }
 
-  .feedback .customer q {
+  .customer q {
     padding: 1rem;
   }
 }
@@ -564,7 +536,7 @@ header .social {
   .feedback .customers {
     flex-wrap: wrap;
   }
-  .feedback .customers .customer {
+  .customer {
     flex-basis: calc(100% / 2 - 20px);
   }
 }
@@ -573,7 +545,7 @@ header .social {
   .feedback {
     padding: 2rem 1rem;
   }
-  .feedback .customers .customer {
+  .customer {
     flex-basis: 100%;
   }
 }
@@ -590,20 +562,20 @@ header .social {
   padding: 2rem 0;
 }
 
-.companies .text h2 {
+.companies h2 {
   font-size: 1rem;
   letter-spacing: 2px;
   color: var(--Para-COLOR);
   margin-bottom: 2rem;
 }
 
-.companies .text h3 {
+.companies h3 {
   font-size: 2rem;
   margin-bottom: 5rem;
   position: relative;
 }
 
-.companies .text h3::after {
+.companies h3::after {
   position: absolute;
   content: "";
   width: 30px;
@@ -613,11 +585,11 @@ header .social {
   left: 0;
 }
 
-.companies .text p {
+.companies p {
   color: var(--Para-COLOR);
 }
 
-.companies .logos {
+.logos {
   flex-basis: 65%;
   display: flex;
   justify-content: space-between;
@@ -625,13 +597,13 @@ header .social {
   gap: 1rem;
 }
 
-.companies .logos .logo {
+.logos .logo {
   flex-basis: calc((100% / 3) - 20px);
   position: relative;
   cursor: pointer;
 }
 
-.companies .logos .logo .layer {
+.layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -647,7 +619,7 @@ header .social {
   opacity: 0;
 }
 
-.companies .logos .logo:hover .layer {
+.logo:hover .layer {
   opacity: 1;
 }
 
@@ -656,16 +628,18 @@ header .social {
     flex-direction: column;
   }
 
-  .companies .logos .logo {
+  .logos .logo {
     flex-basis: calc((100% / 2) - 20px);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .companies .logos .logo {
+  .logos .logo {
     flex-basis: 100%;
   }
 }
+
+/* PLANS SECTION */
 
 .plans {
   padding: 5rem 2.5rem;
@@ -698,12 +672,12 @@ header .social {
   margin-bottom: 2rem;
 }
 
-.plans .all-plans {
+.all-plans {
   display: flex;
   justify-content: space-between;
 }
 
-.plans .all-plans .plan {
+.plan {
   background-color: white;
   padding: 2rem;
   flex-basis: calc((100% / 3) - 20px);
@@ -715,34 +689,34 @@ header .social {
   border: 10px solid white;
 }
 
-.plans .all-plans .plan:hover {
+.plan:hover {
   border-color: var(--THEME-COLOR);
 }
 
-.plans .all-plans .plan h2 {
+.plan h2 {
   text-transform: uppercase;
   font-size: 1.25rem;
 }
 
-.plans .all-plans .plan h3 {
+.plan h3 {
   color: var(--Para-COLOR);
   font-weight: 100;
   font-style: italic;
 }
 
-.plans .all-plans .plan .price {
+.price {
   background-color: #f5f5f5;
   padding: 2rem 0.5rem;
 }
 
-.plans .all-plans .plan .price h4 {
+.price h4 {
   font-size: 4rem;
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
 
-.plans .all-plans .plan .price h4::before {
+.price h4::before {
   content: "\0024";
   position: absolute;
   top: 0;
@@ -751,21 +725,21 @@ header .social {
   font-size: 2rem;
 }
 
-.plans .all-plans .plan .price p {
+.price p {
   color: var(--Para-COLOR);
 }
 
-.plans .all-plans .plan .advantages ul li {
+.advantages li {
   color: var(--FT-COLOR);
   padding: 1rem;
   border-bottom: 1px solid #e1e1e1;
 }
 
-.plans .all-plans .plan .advantages ul li:last-of-type {
+.advantages li:last-of-type {
   border: none;
 }
 
-.plans .all-plans .plan a {
+.plan a {
   display: block;
   width: fit-content;
   border: 5px solid var(--FT-COLOR);
@@ -777,29 +751,26 @@ header .social {
   color: var(--FT-COLOR);
   letter-spacing: 2px;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
-.plans .all-plans .plan a:is(a:hover, a:focus) {
+.plan a:is(a:hover, a:focus) {
   color: var(--THEME-COLOR);
   border-color: var(--THEME-COLOR);
 }
 
 @media screen and (max-width: 992px) {
-  .plans .all-plans {
+  .all-plans {
     flex-wrap: wrap;
   }
-  .plans .all-plans .plan {
+
+  .plan {
     flex-basis: calc((100% / 2) - 60px);
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .plans .all-plans .plan {
+  .plan {
     flex-basis: 100%;
   }
 }
@@ -812,22 +783,13 @@ footer {
   padding: 3rem;
 }
 
-footer p {
-}
-
-footer .media {
+.media {
   display: flex;
 }
 
-footer .media .icon {
-}
-
-footer .media .icon a {
+.media a {
   padding: 1rem;
   color: inherit;
-}
-
-footer .media .icon a i {
 }
 
 @media screen and (max-width: 576px) {
@@ -835,7 +797,7 @@ footer .media .icon a i {
     padding: 3rem 1rem;
   }
 
-  footer .media .icon a {
+  .media a {
     padding: 1rem 0.5rem;
   }
 }
